@@ -1,0 +1,27 @@
+<idea-plugin>
+	<id>eerorika.git.unstage</id>
+	<name>Git unstage</name>
+	<version>1.0</version>
+	<vendor url="https://github.com/eerorika/">Eero Rikalainen</vendor>
+
+	<description><![CDATA[
+Unstage action that executes <code>git reset -- filePaths</code><br />
+Depends on Git4Idea plugin.
+]]></description>
+
+	<change-notes><![CDATA[
+1.0 Initial version
+]]>
+	</change-notes>
+
+	<idea-version since-build="172.3968.37"/>
+
+	<depends>Git4Idea</depends>
+	<depends>com.intellij.modules.vcs</depends>
+
+	<actions>
+		<action id="eerorika.unstage.Unstage" class="eerorika.unstage.Unstage" text="Unstage">
+			<add-to-group group-id="Git.ContextMenu" anchor="after" relative-to-action="Git.Add"/>
+		</action>
+	</actions>
+</idea-plugin>
